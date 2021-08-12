@@ -8,11 +8,11 @@
       <jdbc-url>mongodb://localhost:27017/prueba_tecnica</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="prueba_tecnica" uuid="36d36b39-eab3-4f86-9bd6-96d9cbb6b54d">
+    <data-source source="LOCAL" name="prueba_tecnica" uuid="33f249b2-dcd1-4c70-a817-8e9101a53175">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:mem:prueba_tecnica</jdbc-url>
+      <jdbc-url>jdbc:h2:file:./data/prueba_tecnica;AUTO_SERVER=TRUE</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
