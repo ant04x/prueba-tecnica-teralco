@@ -1,6 +1,12 @@
 package dev.ant04x.pruebatecnicateralco.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Entity
 public class Car {
@@ -12,6 +18,9 @@ public class Car {
   private String colorName;
   @ManyToOne
   private Brand carBrandIdFk;
+  @JsonIgnore
+  @OneToMany(cascade = CascadeType.ALL)
+  private List<Price> prices;
 
 
   public Car() {}
@@ -57,4 +66,23 @@ public class Car {
     this.carBrandIdFk = carBrandIdFk;
   }
 
+  public List<Price> getPrices() {
+    return prices;
+  }
+
+  public void setPrices(List<Price> prices) {
+    this.prices = prices;
+  }
+
+  public static List<String> getColumns() {
+    return new ArrayList<>(){
+      {
+        add("id");
+        add("modelName");
+        add("colorName");
+        add("carBrandIdFk");
+        add("prices");
+      }
+    };
+  }
 }

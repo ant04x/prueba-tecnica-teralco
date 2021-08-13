@@ -1,9 +1,9 @@
 package dev.ant04x.pruebatecnicateralco.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Brand {
@@ -12,6 +12,9 @@ public class Brand {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
   private String name;
+  @JsonIgnore
+  @OneToMany(cascade = CascadeType.ALL)
+  private List<Price> cars;
 
   public Brand() {}
 
@@ -36,4 +39,11 @@ public class Brand {
     this.name = name;
   }
 
+  public List<Price> getCars() {
+    return cars;
+  }
+
+  public void setCars(List<Price> cars) {
+    this.cars = cars;
+  }
 }

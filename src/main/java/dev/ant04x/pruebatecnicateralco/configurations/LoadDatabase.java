@@ -35,16 +35,19 @@ public class LoadDatabase {
         );
 
         List<Price> insertingPrices = Arrays.asList(
-                new Price(new Timestamp(1565565807), new Timestamp(1597188207), 300000, insertingCars.get(1)), // 2019-2020
-                new Price(new Timestamp(1597188207), new Timestamp(1628724207), 300000, insertingCars.get(1)), // 2020-2021
-                new Price(new Timestamp(1123802607), new Timestamp(1597188207), 300000, insertingCars.get(0)) // 2005-2020
+                new Price(new Timestamp(1565565807311L), new Timestamp(1597188207311L), 300000, insertingCars.get(1)), // 2019-2020
+                new Price(new Timestamp(1597188207311L), new Timestamp(1628724207311L), 300000, insertingCars.get(1)), // 2020-2021
+                new Price(new Timestamp(1123802607311L), new Timestamp(1597188207311L), 300000, insertingCars.get(0)) // 2005-2020
         );
 
         return args -> {
+            prices.deleteAll();
+            cars.deleteAll();
+            brands.deleteAll();
+
             brands.saveAll(insertingBrands);
             cars.saveAll(insertingCars);
             prices.saveAll(insertingPrices);
-            System.out.println(brands.findAll());
         };
     }
 }
