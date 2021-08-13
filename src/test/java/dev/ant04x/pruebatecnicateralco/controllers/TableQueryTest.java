@@ -18,5 +18,6 @@ class TableQueryTest {
 
     @Test
     void tableQuery() {
+        // TODO Comprobar que se ha devuelto un archivo y que su tamaño no es 0KB.
     }
 }

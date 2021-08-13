@@ -18,5 +18,9 @@ class FilteredQueryTest {
 
     @Test
     void filteredQuery() {
+        // TODO Comprobar bad request con parametros mal puestos.
+        // TODO Comprobar que los IDs sean iguales cuando correspondan.
+        // TODO Comprobar que los IDs sean mayores cuando correspondan.
+        // TODO Comprobar que los IDs sean menores cuando correspondan.
     }
 }

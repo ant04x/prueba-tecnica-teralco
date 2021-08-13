@@ -18,5 +18,9 @@ class SimpleQueryTest {
 
     @Test
     void simpleQuery() {
+        // TODO Comprobar bad request IDs no validos.
+        // TODO Comprobar sobrepaso de mínimo.
+        // TODO Comprobar sobrepaso de máximo.
+        // TODO Comprobar buen resultado.
     }
 }

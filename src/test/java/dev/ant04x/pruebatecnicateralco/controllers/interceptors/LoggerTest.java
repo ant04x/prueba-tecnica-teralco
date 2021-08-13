@@ -22,11 +22,6 @@ class LoggerTest {
 
     @Test
     void preHandle() {
-        MongoOperations mongoOps = new MongoTemplate(
-                new SimpleMongoClientDatabaseFactory(MongoClients.create(),
-                        "prueba_tecnica")
-        );
-
-        mongoOps.
+        // TODO Comprobar buen resultado, el aumento de la colección al atajar a ambos métodos.
     }
 }

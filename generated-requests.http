@@ -1,0 +1,16 @@
+###                                  Clio ID --v
+GET http://localhost:8080/price/1123802607312/260/
+
+###
+GET http://localhost:8080/cars?selColumn=id&filter=gt&value=1
+
+<> 2021-08-13T041338.200.json
+<> 2021-08-13T041022.200.json
+<> 2021-08-13T040507.200.json
+<> 2021-08-12T235733.200.json
+<> 2021-08-12T234935.500.json
+
+###
+GET http://localhost:8080/download/cars
+
+<> 2021-08-12T234812.200.json
